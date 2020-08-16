@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.parthdesai1208.motionlayout.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_basicAnimation"
+            app:destination="@id/basicAnimation" />
+        <action
+            android:id="@+id/action_homeFragment_to_pagerFragment"
+            app:destination="@id/pagerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_basicAnimationSwipe"
+            app:destination="@id/basicAnimationSwipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicAnimation"
+        android:name="com.parthdesai1208.motionlayout.basicAnimation"
+        android:label="Basic Animation(Click)" />
+    <fragment
+        android:id="@+id/pagerFragment"
+        android:name="com.parthdesai1208.motionlayout.PagerFragment"
+        android:label="Introduction Slides"
+        tools:layout="@layout/fragment_pager" />
+    <fragment
+        android:id="@+id/basicAnimationSwipe"
+        android:name="com.parthdesai1208.motionlayout.BasicAnimationSwipe"
+        android:label="Basic Animation(Swipe)"
+        tools:layout="@layout/fragment_basic_animation_swipe" />
+</navigation>
